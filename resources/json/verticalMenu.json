@@ -1,0 +1,371 @@
+{
+    "menu": [
+        {
+
+            "route":"mimin.dashboard.index",
+            "route_is":"mimin.dashboard.*",
+            "permission":["dashboard.lihat"],
+            "url":"/",
+            "name": "Dashboard",
+            "slug": "dashboard",
+            "icon": "feather icon-home"
+        },
+        {
+            "url": "",
+            "name": "Pesanan",
+            "permission":["pesanan.preorder.lihat","pesanan.masuk.lihat","pesanan.masuk.lihat","pesanan.diproses.lihat","pesanan.diantar.lihat","pesanan.dikirim.lihat","pesanan.selesai.lihat","pesanan.dibatalkan.lihat","pesanan.status.lihat"],
+            "icon": "feather icon-log-in",
+            "submenu": [
+                {
+
+                    "route":"mimin.pesanan.preorder.index",
+                    "route_is":"mimin.pesanan.preorder.*",
+                    "permission":["pesanan.preorder.lihat"],
+                    "url": "/pesanan/preorder",
+                    "name": "Preorder",
+                    "i18n": "nav.preorder",
+                    "icon": "feather icon-heart"
+                },
+                {
+                    "route":"mimin.pesanan.masuk.index",
+                    "route_is":"mimin.pesanan.masuk.*",
+                    "permission":["pesanan.masuk.lihat"],
+                    "url": "/pesanan/masuk",
+                    "name": "Masuk",
+                    "i18n": "nav.pesanan_masuk",
+                    "badge": "2",
+                    "badgeClass": "badge badge-warning badge-pill float-right",
+                    "icon": "feather icon-inbox"
+                },
+                {
+                    "route":"mimin.pesanan.diproses.index",
+                    "route_is":"mimin.pesanan.diproses.*",
+                    "permission":["pesanan.diproses.lihat"],
+                    "url": "/pesanan/diproses",
+                    "name": "Diproses",
+                    "i18n": "nav.pesanan_diproses",
+                    "icon": "feather icon-refresh-ccw"
+                },
+                {
+                  "route":"mimin.pesanan.diantar.index",
+                  "route_is":"mimin.pesanan.diantar.*",
+                  "permission":["pesanan.diantar.lihat"],
+                  "url": "/pesanan/diantar",
+                  "name": "Diantar",
+                  "i18n": "nav.pesanan_diantar",
+                  "icon": "feather icon-mail"
+              },
+                  {
+                    "route":"mimin.pesanan.dikirim.index",
+                    "route_is":"mimin.pesanan.dikirim.*",
+                    "permission":["pesanan.dikirim.lihat"],
+                    "url": "/pesanan/dikirim",
+                    "name": "Terkirim",
+                    "i18n": "nav.pesanan_dikirim",
+                    "icon": "feather icon-mail"
+                },
+                {
+                    "route":"mimin.pesanan.selesai.index",
+                    "route_is":"mimin.pesanan.selesai.*",
+                    "permission":["pesanan.selesai.lihat"],
+                    "url": "/pesanan/selesai",
+                    "name": "Selesai",
+                    "i18n": "nav.wilayah",
+                    "icon": "feather icon-check"
+                },
+                {
+                    "route":"mimin.pesanan.dibatalkan.index",
+                    "route_is":"mimin.pesanan.dibatalkan.*",
+                    "permission":["pesanan.dibatalkan.lihat"],
+                    "url": "/pesanan/dibatalkan",
+                    "name": "Dibatalkan",
+                    "i18n": "nav.dibatalkan",
+                    "icon": "feather icon-x"
+                },
+                {
+                  "route":"mimin.pesanan.status.index",
+                  "route_is":"mimin.pesanan.status.*",
+                  "permission":["pesanan.status.lihat"],
+                  "url": "/pesanan/status",
+                  "name": "Status",
+                  "i18n": "nav.status",
+                  "icon": "feather icon-info"
+              }
+            ]
+        },{
+          "route":"mimin.pengeluaran.index",
+          "route_is":"mimin.pengeluaran.*",
+          "permission":["pengeluaran.lihat"],
+          "url": "/pengeluaran",
+          "name": "Pengeluaran",
+          "slug": "pengeluaran",
+          "icon": "feather icon-log-out"
+      },
+      {
+          "url": "",
+          "name": "Inventori",
+          "icon": "feather icon-zap",
+
+          "permission":["inventori.produk.lihat","inventori.rakitproduk.lihat","inventori.stokmasuk.lihat","inventori.stokkeluar.lihat","inventori.transferstok.lihat","inventori.returbarang.lihat"],
+          "submenu": [
+
+              {
+                  "route":"mimin.inventori.produk.index",
+                  "route_is":"mimin.inventori.produk.*",
+                  "url": "/produk",
+                  "permission":["inventori.produk.lihat"],
+                  "name": "Produk",
+                  "i18n": "nav.produk",
+                  "icon": "feather icon-box"
+              },
+              {
+                "route":"mimin.inventori.rakit-produk.index",
+                "route_is":"mimin.inventori.rakit-produk.*",
+
+                "permission":["inventori.rakitproduk.lihat"],
+                  "url": "/rakit_produk",
+                  "name": "Rakit Produk",
+                  "i18n": "nav.rakit_produk",
+                  "icon": "feather icon-slack"
+              },
+              {
+                "route":"mimin.inventori.stok-masuk.index",
+                "route_is":"mimin.inventori.stok-masuk.*",
+                "permission":["inventori.stokmasuk.lihat"],
+                  "url": "/stok_masuk",
+                  "name": "Stok Masuk",
+                  "i18n": "nav.stok_masuk",
+                  "icon": "feather icon-log-in"
+              },
+              {
+                "route":"mimin.inventori.stok-keluar.index",
+                "route_is":"mimin.inventori.stok-keluar.*",
+                "permission":["inventori.stokkeluar.lihat"],
+                  "url": "/stok-keluar",
+                  "name": "Stok Keluar",
+                  "i18n": "nav.stok_keluar",
+                  "icon": "feather icon-log-out"
+              },
+              {
+                "route":"mimin.inventori.transfer.index",
+                "route_is":"mimin.inventori.transfer.*",
+                "permission":["inventori.transferstok.lihat"],
+                  "url": "/transfer",
+                  "name": "Transfer Stok",
+                  "i18n": "nav.transfer",
+                  "icon": "feather icon-repeat"
+              },
+              {
+                "route":"mimin.inventori.retur-barang.index",
+                "route_is":"mimin.inventori.retur-barang.*",
+                "permission":["inventori.returbarang.lihat"],
+                  "url": "/retur_barang",
+                  "name": "Retur Barang",
+                  "i18n": "nav.retur_barang",
+                  "icon": "feather icon-rotate-ccw"
+              }
+          ]
+      },{
+
+      "route":"mimin.kas.index",
+      "route_is":"mimin.kas.*",
+        "url": "/kas",
+
+        "permission":["kas.lihat"],
+        "name": "Kas",
+        "slug": "kas",
+        "icon": "feather icon-book"
+    },{
+
+      "route":"mimin.dompet.index",
+      "route_is":"mimin.dompet.*",
+      "url": "/dompet",
+      "permission":["dompet.lihat"],
+      "name": "Dompet",
+      "slug": "dompet",
+      "icon": "feather icon-credit-card"
+  },{
+
+    "route":"mimin.point.index",
+    "route_is":"mimin.point.*",
+    "url": "/point",
+
+    "permission":["point.lihat"],
+    "name": "Point",
+    "slug": "point",
+    "icon": "feather icon-credit-card"
+},
+  {
+      "url": "",
+      "name": "Orang",
+      "icon": "feather icon-users",
+      "permission":["mitra.pelanggan.lihat","mitra.suplier.lihat","mitra.kurirtoko.lihat"],
+      "submenu": [
+          {
+              "route":"mimin.orang.pelanggan.index",
+              "route_is":"mimin.orang.pelanggan.*",
+              "url": "/pelanggan",
+              "name": "Pelanggan",
+              "permission":["mitra.pelanggan.lihat"],
+              "i18n": "nav.pelanggan",
+              "icon": "feather icon-user"
+          },
+          {
+              "route":"mimin.orang.suplier.index",
+              "route_is":"mimin.orang.suplier.*",
+              "permission":["mitra.suplier.lihat"],
+              "url": "/suplier",
+              "name": "Suplier",
+              "i18n": "nav.suplier",
+              "icon": "feather icon-user"
+          },
+          {
+              "route":"mimin.orang.kurir.index",
+              "route_is":"mimin.orang.kurir.*",
+              "permission":["mitra.kurirtoko.lihat"],
+              "url": "/kurir",
+              "name": "Kurir",
+              "i18n": "nav.kurir",
+              "icon": "feather icon-user"
+          }
+      ]
+  },
+  {
+      "url": "",
+      "name": "Laporan",
+      "icon": "feather icon-bar-chart",
+
+      "permission":["laporan.penjualan","laporan.pengiriman"],
+      "submenu": [
+          {
+            "route":"mimin.laporan.penjualan.index",
+            "route_is":"mimin.laporan.penjualan.*",
+
+            "permission":["laporan.penjualan"],
+              "url": "/laporan/penjualan",
+              "name": "Penjualan",
+              "i18n": "nav.penjualan",
+              "icon": "feather icon-trending-up"
+          },
+          {
+            "route":"mimin.laporan.stok.index",
+            "route_is":"mimin.laporan.stok.*",
+              "url": "/stok",
+              "name": "Stok",
+              "i18n": "nav.stok",
+              "icon": "feather icon-sliders"
+          },
+          {
+            "route":"mimin.laporan.piutang.index",
+            "route_is":"mimin.laporan.piutang.*",
+              "url": "/piutang",
+              "name": "Piutang",
+              "i18n": "nav.piutang",
+              "icon": "feather icon-corner-up-right"
+          },
+          {
+            "route":"mimin.laporan.hutang.index",
+            "route_is":"mimin.laporan.hutang.*",
+              "url": "/hutang",
+              "name": "Hutang",
+              "i18n": "nav.hutang",
+              "icon": "feather icon-corner-left-down"
+          },
+
+          {
+            "route":"mimin.laporan.persediaan.index",
+            "route_is":"mimin.laporan.persediaan.*",
+              "url": "/persediaan",
+              "name": "Persediaan",
+              "i18n": "nav.persediaan",
+              "icon": "feather icon-pie-chart"
+          },
+          {
+            "route":"mimin.laporan.laba_rugi.index",
+            "route_is":"mimin.laporan.laba_rugi.*",
+              "url": "/laba_rugi",
+              "name": "Laba Rugi",
+              "i18n": "nav.laba_rugi",
+              "icon": "feather icon-thumbs-up"
+          },
+          {
+            "route":"mimin.laporan.pengiriman.index",
+            "route_is":"mimin.laporan.pengiriman.*",
+              "url": "/pengiriman",
+              "permission":["laporan.pengiriman"],
+              "name": "Pengiriman",
+              "i18n": "nav.pengiriman",
+              "icon": "feather icon-mail"
+          }
+      ]
+  },
+        {
+            "url": "",
+            "name": "Pengaturan",
+            "icon": "feather icon-settings",
+
+            "permission":["pengaturan.pembayaran","pengaturan.pengiriman","pengaturan.gudang","pengaturan.cabang","pengaturan.wilayah","pengaturan.pengguna","pengaturan.hakakses"],
+            "submenu": [
+
+                {
+                    "url": "/pembayaran",
+                    "route": "mimin.pengaturan.pembayaran.index",
+                    "route_is": "mimin.pengaturan.pembayaran.*",
+                    "name": "Pembayaran",
+                    "permission":["pengaturan.pembayaran"],
+                    "i18n": "nav.metode_pembayaran",
+                    "icon": "feather icon-credit-card"
+
+                },
+                {
+                    "url": "/pengiriman",
+                    "route": "mimin.pengaturan.pengiriman.index",
+                    "route_is": "mimin.pengaturan.pengiriman.*",
+                    "permission":["pengaturan.pengiriman"],
+                    "name": "Pengiriman",
+                    "i18n": "nav.metode_pengiriman",
+                    "icon": "feather icon-box"
+                },{
+                  "url": "/gudang",
+                  "route": "mimin.pengaturan.gudang.index",
+                  "route_is": "mimin.pengaturan.gudang.*",
+                  "permission":["pengaturan.gudang"],
+                  "name": "Gudang",
+                  "i18n": "nav.gudang",
+                  "icon": "feather icon-server"
+              },{
+                "url": "/cabang",
+                "route": "mimin.pengaturan.cabang.index",
+                "route_is": "mimin.pengaturan.cabang.*",
+                "permission":["pengaturan.cabang"],
+                "name": "Cabang",
+                "i18n": "nav.cabang",
+                "icon": "feather icon-map"
+            },
+                {
+                    "url": "/provinsi",
+                    "route": "mimin.pengaturan.provinsi.index",
+                    "route_is": "mimin.pengaturan.provinsi.*",
+                    "permission":["pengaturan.wilayah"],
+                    "name": "Wilayah",
+                    "i18n": "nav.wilayah",
+                    "icon": "feather icon-map-pin"
+                },{
+                  "route_is": "mimin.pengaturan.pengguna.*",
+                  "route": "mimin.pengaturan.pengguna.index",
+                  "permission":["pengaturan.pengguna"],
+                  "name": "Pengguna",
+                  "i18n": "nav.pengguna",
+                  "icon": "feather icon-users"
+              },{
+                  "route_is": "mimin.pengaturan.hakakses.*",
+                  "route": "mimin.pengaturan.hakakses.index",
+                  "permission":["pengaturan.hakakses"],
+                  "name": "Hak Akses",
+                  "i18n": "nav.hak_akses",
+                  "icon": "feather icon-lock"
+              }
+            ]
+        }
+    ]
+}

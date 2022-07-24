@@ -1,0 +1,87 @@
+{
+    "menu": [
+        {
+
+            "route":"pelanggan.dashboard.index",
+            "route_is":"pelanggan.dashboard.*",
+
+            "url":"/",
+            "name": "Dashboard",
+            "slug": "dashboard",
+            "icon": "feather icon-home"
+        }
+
+        ,
+        {
+            "url": "",
+            "name": "Pesanan",
+            "icon": "feather icon-log-in",
+            "submenu": [
+                {
+                    "route":"pelanggan.pesanan.masuk.index",
+                    "route_is":"pelanggan.pesanan.masuk.*",
+                    "url": "/pesanan/masuk",
+                    "name": "Masuk",
+                    "i18n": "nav.pesanan_masuk",
+                    "badge": "2",
+                    "badgeClass": "badge badge-warning badge-pill float-right",
+                    "icon": "feather icon-inbox"
+                },
+                {
+                    "route":"pelanggan.pesanan.diproses.index",
+                    "route_is":"pelanggan.pesanan.diproses.*",
+                    "url": "/pesanan/diproses",
+                    "name": "Diproses",
+                    "i18n": "nav.pesanan_diproses",
+                    "icon": "feather icon-refresh-ccw"
+                },
+                {
+                    "route":"pelanggan.pesanan.selesai.index",
+                    "route_is":"pelanggan.pesanan.selesai.*",
+                    "url": "/pesanan/selesai",
+                    "name": "Selesai",
+                    "i18n": "nav.wilayah",
+                    "icon": "feather icon-check"
+                },
+                {
+                    "route":"pelanggan.pesanan.dibatalkan.index",
+                    "route_is":"pelanggan.pesanan.dibatalkan.*",
+                    "url": "/pesanan/dibatalkan",
+                    "name": "Dibatalkan",
+                    "i18n": "nav.dibatalkan",
+                    "icon": "feather icon-x"
+                }
+            ]
+        },
+
+
+
+  {
+
+      "route":"pelanggan.dompet.index",
+      "route_is":"pelanggan.dompet.*",
+      "url": "/dompet",
+      "name": "Dompet",
+      "slug": "dompet",
+      "icon": "feather icon-credit-card"
+  },
+
+  {
+
+    "route":"pelanggan.pelanggan.index",
+    "route_is":"pelanggan.pelanggan.*",
+    "url": "/pelanggan",
+    "name": "Pelanggan",
+    "slug": "pelanggan",
+    "icon": "feather icon-user"
+},{
+
+  "route":"pelanggan.point.index",
+  "route_is":"pelanggan.point.*",
+  "url": "/point",
+  "name": "Point",
+  "slug": "point",
+  "icon": "feather icon-credit-card"
+}
+  ]
+}

@@ -1,0 +1,114 @@
+@extends('layouts/contentLayoutMaster')
+
+@section('title', $judul)
+
+@section ('tombol_sudut')
+@endsection
+@section('vendor-script')
+
+<script src="{{ asset(mix('js/scripts/jquery.mask.min.js')) }}"></script>
+<script src="{{ asset(mix('js/scripts/numeral.min.js')) }}"></script>
+@endsection
+
+@section('page-script')
+<script>
+
+$(document).ready( function() {
+
+    $('.nominal').mask("000.000.000.000.000", {reverse: true});
+    $("form").submit(function (event) {
+            $('.nominal').unmask();
+    });
+
+    numeral.register('locale', 'id', {
+    delimiters: {
+        thousands: '.',
+        decimal: ','
+    },
+    abbreviations: {
+        thousand: 'rb',
+        million: 'jt',
+        billion: 'M',
+        trillion: 'T'
+    },
+    ordinal : function (number) {
+        return number === 1 ? 'er' : 'ème';
+    },
+    currency: {
+        symbol: 'Rp'
+    }
+});
+
+// switch between locales
+numeral.locale('id');
+});
+</script>
+@endsection
+@section('content')
+
+<!-- Basic Horizontal form layout section start -->
+<section id="basic-horizontal-layouts">
+                    <div class="row match-height">
+                        <div class="col-md-12 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        {!! Form::model($harga_khusus,['method'=>'patch','route' => ['mimin.inventori.produk.hargakhusus.update',$produk->id,$harga_khusus->id],'class'=>'form form-horizontal']) !!}
+                                            <div class="form-body">
+                                                <div class="row">
+                                                <div class="col-12">
+                                                        <div class="form-group row">
+                                                            <div class="col-md-4">
+                                                                <span>Produk</span>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <strong>{{$produk->nama}}</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <div class="form-group row">
+                                                            <div class="col-md-4">
+                                                                <span>Kategori</span>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <strong>{{$harga_khusus->kategori->nama}}</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <div class="form-group row">
+                                                            <div class="col-md-4">
+                                                                <span>Harga Jual</span>
+                                                            </div>
+                                                            <div class="col-md-8 input-group">
+                                                            <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1">Rp.</span>
+                                                                </div>
+                                                            {{ Form::text('harga_jual',old('harga_jual'), ['class' => 'form-control nominal','required']) }}
+                                                             </div>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class="col-md-8 offset-md-4">
+                                                        <button type="submit" class="btn btn-primary mr-1 mb-1">Simpan</button>
+                                                        <a href="{{route('mimin.inventori.produk.show',$produk->id)}}" class="btn btn-outline-warning mr-1 mb-1">Kembali</a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {!! Form::close() !!}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+</section>
+
+@endsection
